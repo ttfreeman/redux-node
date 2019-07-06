@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel src/index.js -d dist",
+    "start": "npm run build && node dist/index.js",
     "test": "jest",
     "test:watch": "npm test -- --watch"
   },
@@ -11,9 +13,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
     "@babel/preset-env": "^7.5.0",
-    "babel-cli": "^6.26.0",
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "@babel/node": "^7.5.0",
+    "redux": "^4.0.1"
   }
 }
